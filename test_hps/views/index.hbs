@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<ul>
+    {{#each arr as |val index|}}
+        <li>{{index}} : {{val}}</li>
+    {{/each}}
+</ul>
+<div class="container">
+    {{#if error}}
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div>
+                <ul>
+                    {{#each error.errors }}
+                         <li>{{this.msg}}</li>   
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/if}}
+   
+    <div class="row">
+        <form action="/users/info" method="post" class="form-group">
+        <div class="col-6">
+            <label for="email" class="form-label">Enter your Email    :</label>
+            <input type="text" name="email" id="email" class="bg-success p-2 text-dark bg-opacity-10 form-control  form-control-lg "> <br>   
+        </div>
+        <div class="col-6">
+            <label for="name" class="form-label">Enter your Name     : </label>
+            <input type="text" name="name" id="name" class=" bg-success p-2 text-dark bg-opacity-10 form-control  form-control-lg"> <br>
+        </div>
+        <div class="col-6">
+           <label for="number" class="form-label"></label>Enter your Number   : </label>
+           <input type="number" id="number" name="mobile" class=" bg-success p-2 text-dark bg-opacity-10 form-control  form-control-lg">  <br>
+        </div>
+        <div class="col-6">
+            <label for="pass" class="form-label"></label>Enter your Password :</label>
+            <input type="password" id="pass" name="password" class=" bg-success p-2 text-dark bg-opacity-10 form-control  form-control-lg"> <br>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit Form">
+    </form> 
+    </div>
+ </div>
