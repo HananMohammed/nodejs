@@ -1,0 +1,93 @@
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Insert</div>
+            <div class="card-body text-dark">
+                <form action="/insert" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" id="username"
+                            aria-describedby="username" placeholder="Ennter username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">User Email</label>
+                        <input type="email" class="form-control" name="userEmail" id="userEmail"
+                            placeholder="User Email">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-header">Get USers Data</div>
+            <div class="card-body">
+                 <form action="/getUsers" method="get">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Get Users </button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <ul>
+                {{#each items as |item|}}
+                    <li class="mb-5">
+                       <div class="mb-1"> ID:  {{item._id}}</div>
+                       <div class="mb-1" >  Username:  {{item.userName}}</div>
+                        <div class="mb-1"> Email:  {{item.userEmail}}</div>
+
+                    </li>
+                {{/each}}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="col-sm-3">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Update USer </div>
+            <div class="card-body text-dark">
+                <form action="/update" method="post">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="text" class="form-control" name="id" id="id"
+                            aria-describedby="id" placeholder="Ennter ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" id="username"
+                            aria-describedby="username" placeholder="Ennter username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">User Email</label>
+                        <input type="email" class="form-control" name="userEmail" id="userEmail"
+                            placeholder="User Email">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-header">Delete User </div>
+            <div class="card-body">
+                <form action="/delete" method="post">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="text" class="form-control" name="id" id="id"
+                            aria-describedby="id" placeholder="Ennter ID">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div>
+</div>
