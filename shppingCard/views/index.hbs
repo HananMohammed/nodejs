@@ -1,64 +1,22 @@
 <div class="container mt-5">
     <div class="row">
+        {{#each products}}
         <div class="col-md-4 mb-3">
             <div class="card">
-                <img src="/images/gsmarena_000.jpg" class="card-img-top" alt="image">
+                <img src="{{this.imagePath}}" class="card-img-top" alt="image">
                 <div class="card-body">
-                    <h5 class="card-title fs-20"> Iphone s6: </h5>
-                    <p class="card-text fs-15" >Storage Capacity: 64 GB </p>
-                    <p class="card-text fs-15" >Numder of SIM : Dual SIM</p>
-                     <p class="card-text fs-15" >Display Size: 6.5 Inch</p>
+                    <h5 class="card-title fs-20">{{this.name}}</h5>
+                    <p class="card-text fs-15" >Storage Capacity: {{this.info.storageCapacity}} GB </p>
+                    <p class="card-text fs-15" >Numder of SIM : {{this.info.numOfSim}}</p>
+                     <p class="card-text fs-15" >Display Size: {{this.info.cameraResolutoin}} Inch</p>
                     <div class="d-flex justify-content-between align-items-baseline">
-                        <div class="price">$ 220</div>
+                        <div class="price">$ {{this.price}}</div>
                         <a href="#" class="btn btn-outline-success">Buy</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <img src="/images/gsmarena_000.jpg" class="card-img-top" alt="image">
-                <div class="card-body">
-                    <h5 class="card-title fs-20"> Iphone s6: </h5>
-                    <p class="card-text fs-15" >Storage Capacity: 64 GB </p>
-                    <p class="card-text fs-15" >Numder of SIM : Dual SIM</p>
-                     <p class="card-text fs-15" >Display Size: 6.5 Inch</p>
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <div class="price">$ 220</div>
-                        <a href="#" class="btn btn-outline-success">Buy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <img src="/images/gsmarena_000.jpg" class="card-img-top" alt="image">
-                <div class="card-body">
-                    <h5 class="card-title fs-20"> Iphone s6: </h5>
-                    <p class="card-text fs-15" >Storage Capacity: 64 GB </p>
-                    <p class="card-text fs-15" >Numder of SIM : Dual SIM</p>
-                     <p class="card-text fs-15" >Display Size: 6.5 Inch</p>
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <div class="price">$ 220</div>
-                        <a href="#" class="btn btn-outline-success">Buy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <img src="/images/gsmarena_000.jpg" class="card-img-top" alt="image">
-                <div class="card-body">
-                    <h5 class="card-title fs-20"> Iphone s6: </h5>
-                    <p class="card-text fs-15" >Storage Capacity: 64 GB </p>
-                    <p class="card-text fs-15" >Numder of SIM : Dual SIM</p>
-                     <p class="card-text fs-15" >Display Size: 6.5 Inch</p>
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <div class="price">$ 220</div>
-                        <a href="#" class="btn btn-outline-success">Buy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
+ 

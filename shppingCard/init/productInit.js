@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/shoping_card', {useNewUrlParser: true}, (e
     if(error){
         console.log(error)
       }else{
-        console.log('Connecting dfsdfdsfsdfsdf...... ')
+        console.log('Connecting ...... ')
       }
     });;
 
