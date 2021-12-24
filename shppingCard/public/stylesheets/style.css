@@ -2,3 +2,6 @@ img{
     width: 100%;
     height: 250px;
 }
+.navbar-collapse{
+    justify-content: end !important;
+}

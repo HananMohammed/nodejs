@@ -1,14 +1,6 @@
 const Product = require('../models/Product')
 
 let getProducts = function(req, res, next){
-//   Product.find({}, (error, result)=>{
-//       if(error){
-//         console.log(error)
-//       } 
-//        res.render('index', { title: 'Shopping Card ...' , products : result });
-
-//     })
-
     Product.find({}).lean().exec((error, result)=>{
         if(error){
           console.log(error)
